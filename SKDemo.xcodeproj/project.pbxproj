@@ -24,6 +24,9 @@
 		A876265A18F58F050024D423 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A876263518F58F030024D423 /* UIKit.framework */; };
 		A876266218F58F050024D423 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A876266018F58F050024D423 /* InfoPlist.strings */; };
 		A876266418F58F050024D423 /* SKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A876266318F58F050024D423 /* SKDemoTests.m */; };
+		A8E7355218F5E5DF00D2C088 /* SKDemoGameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E7355118F5E5DF00D2C088 /* SKDemoGameOverScene.m */; };
+		A8E7355618F5ECE600D2C088 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = A8E7355418F5ECE600D2C088 /* background-music-aac.caf */; };
+		A8E7355718F5ECE600D2C088 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = A8E7355518F5ECE600D2C088 /* pew-pew-lei.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,10 @@
 		A876265F18F58F050024D423 /* SKDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SKDemoTests-Info.plist"; sourceTree = "<group>"; };
 		A876266118F58F050024D423 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A876266318F58F050024D423 /* SKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKDemoTests.m; sourceTree = "<group>"; };
+		A8E7355018F5E5DF00D2C088 /* SKDemoGameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKDemoGameOverScene.h; sourceTree = "<group>"; };
+		A8E7355118F5E5DF00D2C088 /* SKDemoGameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKDemoGameOverScene.m; sourceTree = "<group>"; };
+		A8E7355418F5ECE600D2C088 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
+		A8E7355518F5ECE600D2C088 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,15 +128,16 @@
 		A876263918F58F030024D423 /* SKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				A876264218F58F030024D423 /* SKDemoAppDelegate.h */,
-				A876264318F58F030024D423 /* SKDemoAppDelegate.m */,
 				A876264518F58F030024D423 /* Main.storyboard */,
 				A876264818F58F030024D423 /* SKDemoViewController.h */,
 				A876264918F58F030024D423 /* SKDemoViewController.m */,
 				A876264B18F58F030024D423 /* SKDemoMyScene.h */,
 				A876264C18F58F030024D423 /* SKDemoMyScene.m */,
+				A8E7355018F5E5DF00D2C088 /* SKDemoGameOverScene.h */,
+				A8E7355118F5E5DF00D2C088 /* SKDemoGameOverScene.m */,
 				A876264E18F58F040024D423 /* Spaceship.png */,
 				A876265018F58F040024D423 /* Images.xcassets */,
+				A8E7355318F5ECE600D2C088 /* Sounds */,
 				A876263A18F58F030024D423 /* Supporting Files */,
 			);
 			path = SKDemo;
@@ -138,6 +146,8 @@
 		A876263A18F58F030024D423 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A876264218F58F030024D423 /* SKDemoAppDelegate.h */,
+				A876264318F58F030024D423 /* SKDemoAppDelegate.m */,
 				A876263B18F58F030024D423 /* SKDemo-Info.plist */,
 				A876263C18F58F030024D423 /* InfoPlist.strings */,
 				A876263F18F58F030024D423 /* main.m */,
@@ -162,6 +172,15 @@
 				A876266018F58F050024D423 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8E7355318F5ECE600D2C088 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A8E7355418F5ECE600D2C088 /* background-music-aac.caf */,
+				A8E7355518F5ECE600D2C088 /* pew-pew-lei.caf */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,10 +260,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8E7355618F5ECE600D2C088 /* background-music-aac.caf in Resources */,
 				A876263E18F58F030024D423 /* InfoPlist.strings in Resources */,
 				A876265118F58F040024D423 /* Images.xcassets in Resources */,
 				A876264F18F58F040024D423 /* Spaceship.png in Resources */,
 				A876264718F58F030024D423 /* Main.storyboard in Resources */,
+				A8E7355718F5ECE600D2C088 /* pew-pew-lei.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +288,7 @@
 				A876264D18F58F030024D423 /* SKDemoMyScene.m in Sources */,
 				A876264418F58F030024D423 /* SKDemoAppDelegate.m in Sources */,
 				A876264A18F58F030024D423 /* SKDemoViewController.m in Sources */,
+				A8E7355218F5E5DF00D2C088 /* SKDemoGameOverScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +495,7 @@
 				A876266918F58F050024D423 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A876266A18F58F050024D423 /* Build configuration list for PBXNativeTarget "SKDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +504,7 @@
 				A876266C18F58F050024D423 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

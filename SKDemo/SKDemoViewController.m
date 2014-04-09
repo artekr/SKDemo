@@ -8,13 +8,28 @@
 
 #import "SKDemoViewController.h"
 #import "SKDemoMyScene.h"
+@import AVFoundation;
+
+@interface SKDemoViewController()
+@property (nonatomic) AVAudioPlayer * backgroundMusicPlayer;
+
+@end
+
 
 @implementation SKDemoViewController
 
-- (void)viewDidLoad
+- (void)viewWillLayoutSubviews
 {
-    [super viewDidLoad];
-
+    [super viewWillLayoutSubviews];
+    
+    // This is some simple code to start the background music playing with endless loops.
+    NSError *error;
+    NSURL * backgroundMusicURL = [[NSBundle mainBundle] URLForResource:@"background-music-aac" withExtension:@"caf"];
+    self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
+    self.backgroundMusicPlayer.numberOfLoops = -1; //playing with endless loops.
+    [self.backgroundMusicPlayer prepareToPlay];
+    [self.backgroundMusicPlayer play];
+    
     // Configure the view.
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = YES;
