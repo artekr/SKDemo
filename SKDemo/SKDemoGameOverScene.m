@@ -40,7 +40,7 @@
                 [SKAction waitForDuration:3.0],
                 [SKAction runBlock:^{
                     //This is how you transition to a new scene in Sprite Kit. First you can pick from a variety of different animated transitions for how you want the scenes to display – you choose a flip transition here that takes 0.5 seconds. Then you create the scene you want to display, and use the presentScene:transition: method on the self.view property.
-                    SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+                SKTransition *reveal = [SKTransition flipVerticalWithDuration:0.5];
                     SKScene *myScene = [[SKDemoMyScene alloc] initWithSize:self.size];
                     [self.view presentScene:myScene transition:reveal];
                 }]

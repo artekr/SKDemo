@@ -167,7 +167,7 @@ static inline CGPoint rwNormalize(CGPoint a){
     //[monster runAction:[SKAction sequence:@[actionMove, actionMoveDone]]];
     
     SKAction * loseAction = [SKAction runBlock:^{
-        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+        SKTransition *reveal = [SKTransition flipVerticalWithDuration:0.5];
         SKScene * gameOverScene = [[SKDemoGameOverScene alloc] initWithSize:self.size won:NO];
         [self.view presentScene:gameOverScene transition: reveal];
     }];
@@ -193,7 +193,7 @@ static inline CGPoint rwNormalize(CGPoint a){
     
     self.monstersDestroyed++;
     if (self.monstersDestroyed > 15) {
-        SKTransition * reveal = [SKTransition flipHorizontalWithDuration:0.5];
+        SKTransition * reveal = [SKTransition flipVerticalWithDuration:0.5];
         SKScene * gameOverScene = [[SKDemoGameOverScene alloc] initWithSize:self.size won:YES];
         [self.view presentScene:gameOverScene transition:reveal];
     }
